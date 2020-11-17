@@ -1,2 +1,2 @@
-# AlphaAlphaCharlie for Wear OS
+# Voicey for Wear OS
 An AAC app for WearOS devices
