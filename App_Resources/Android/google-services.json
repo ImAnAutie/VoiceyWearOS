@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965344653232",
+    "firebase_url": "https://okoprojectaac.firebaseio.com",
+    "project_id": "okoprojectaac",
+    "storage_bucket": "okoprojectaac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965344653232:android:4dbca04dd40f9f2b6cf075",
+        "android_client_info": {
+          "package_name": "uk.org.okonetwork.voicey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965344653232-7432p7stup54ieaogpoh862rsv90btcu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWDOuj73UnvQHn46UQ38OxxdcvfB_U3M8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965344653232-7432p7stup54ieaogpoh862rsv90btcu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
