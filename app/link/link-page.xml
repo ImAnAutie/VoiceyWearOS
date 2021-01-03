@@ -5,7 +5,7 @@
         <StackLayout>
             <GridLayout rows="auto, auto, auto" columns="*, *, *">
                 <Image src="res://icon" stretch="aspectFit" row="0" col="0" rowSpan="2" colSpan="3" />
-                <Label text="Scan the QR code above to sign in" "row="3" col="1"  />
+                <Label text="Scan the QR code above to sign in" row="3" col="1"  />
             </GridLayout>
           </StackLayout>
         </ScrollView>
