@@ -1,5 +1,5 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true"
-    xmlns:ui="nativescript-wear-os/packages/wear-os-layout">
+    xmlns:ui="nativescript-wear-os/packages/wear-os-layout" navigatingTo="navigatingTo">
     <ui:WearOsLayout disableInsetConstraint="false">
       <ScrollView height="100%">
         <StackLayout>

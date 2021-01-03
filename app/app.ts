@@ -5,6 +5,20 @@ purpose of the file is to pass control to the app’s first module.
 */
 
 import { Application } from '@nativescript/core';
+import { firebase } from "@nativescript/firebase";
+
+firebase.init({
+    // Optionally pass in properties for database, authentication and cloud messaging,
+    // see their respective docs.
+  }).then(
+    () => {
+      console.log("firebase.init done");
+    },
+    error => {
+      console.log(`firebase.init error: ${error}`);
+    }
+);
+
 
 Application.run({ moduleName: 'app-root' });
 
