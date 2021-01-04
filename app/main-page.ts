@@ -20,15 +20,18 @@ import {
 
 const displayLinkQr = async function(page:Page) {
     console.log("Switching to link account page");
-    let frame:Frame = page.frame;
+    try {
     let navEntryWithContext: NavigationEntry = {
         moduleName: "link/link-page",
     };
-    frame.navigate(navEntryWithContext);
-
+    Frame.topmost().navigate(navEntryWithContext);
+} catch (error) {
+    console.log("Error navigating")
+    console.log(error);
 }
-// Event handler for Page 'navigatingTo' event attached in main-page.xml
-export async function navigatingTo(args: EventData) {
+}
+// Event handler for Page 'onPageLoaded' event attached in main-page.xml
+export async function onPageLoaded(args: EventData) {
     const page = <Page>args.object;
     page.bindingContext = new HelloWorldModel();
     const user:firebase.User = await firebaseWebApi.auth().currentUser;

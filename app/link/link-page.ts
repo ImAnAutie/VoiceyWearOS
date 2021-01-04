@@ -10,7 +10,7 @@ import { linkViewModel } from './link-view-model';
 import * as dialogs from "@nativescript/core/ui/dialogs";
 import { firebase } from "@nativescript/firebase";
 const firebaseWebApi = require("@nativescript/firebase/app");
-import {exit} from 'nativescript-exit';
+import { firestore } from "@nativescript/firebase";
 import { Frame, NavigationEntry } from "@nativescript/core/ui/frame";
 
 import {
@@ -19,8 +19,25 @@ import {
 } from 'nativescript-wear-os/packages/dialogs';
 
 
-export async function navigatingTo(args: EventData) {
+export async function onPageLoaded(args: EventData) {
     const page = <Page>args.object;
     page.bindingContext = new linkViewModel();
-    //const user:firebase.User = await firebaseWebApi.auth().currentUser;
+
+    const user:firebase.User = await firebaseWebApi.auth().currentUser;
+    console.log(user);
+    console.log(`Subscribing to auth doc`)
+    const authDoc = firebaseWebApi.firestore()
+        .collection("authDocs").doc(user.uid);
+    const unsubscribe = authDoc.onSnapshot(doc => {
+    if (doc.exists) {
+        console.log("Document data:", JSON.stringify(doc.data()));
+        if (doc.data().token) {
+            console.log("*** Now has token ***");
+        } else {
+            console.log("No token?")
+        }
+    } else {
+        console.log("No such document!");
+    }
+});
 }
