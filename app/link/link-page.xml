@@ -1,0 +1,13 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" actionBarHidden="true"
+    xmlns:ui="nativescript-wear-os/packages/wear-os-layout" loaded="onPageLoaded">
+    <ui:WearOsLayout disableInsetConstraint="false">
+      <ScrollView height="100%">
+        <StackLayout>
+            <GridLayout rows="auto, auto, auto, auto" columns="*, *, *">
+                <Image src="{{qrCode}}" stretch="aspectFit" row="0" col="0" rowSpan="1" colSpan="3" />
+                <Label text="Scan the QR code to signin" row="3" col="1"  rowSpan="2" textWrap="true" />
+            </GridLayout>
+          </StackLayout>
+        </ScrollView>
+    </ui:WearOsLayout>
+</Page>

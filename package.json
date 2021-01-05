@@ -1,0 +1,24 @@
+{
+  "name": "voicey-wearos",
+  "main": "app.js",
+  "version": "1.0.0",
+  "author": "The Oko Network <gregory@okonetwork.org.uk>",
+  "description": "AAC application for Wear OS devices",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "https://github.com/OkoWsc/VoiceyWearOS",
+  "homepage": "https://okonetwork.org.uk",
+  "dependencies": {
+    "@nativescript/core": "~7.1.0",
+    "@nativescript/firebase": "^11.1.3",
+    "@nativescript/theme": "~2.3.0",
+    "nativescript-exit": "^1.0.1",
+    "nativescript-qr-generator": "^2.0.0",
+    "nativescript-wear-os": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nativescript/android": "7.0.1",
+    "@nativescript/types": "~7.0.0",
+    "@nativescript/webpack": "~4.0.0",
+    "typescript": "~3.9.0"
+  }
+}
