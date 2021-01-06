@@ -36,14 +36,11 @@ export async function onPageLoaded(args: EventData) {
     page.bindingContext = new HelloWorldModel();
     const user:firebase.User = await firebaseWebApi.auth().currentUser;
     if (user) {
-        await dialogs.alert(`Authenticated as user: ${user.uid}`);
         if (user.isAnonymous) {
-            console.log("Anonymous user, need to link");
-            await dialogs.alert("Anonymous user, need to link");
+            console.log("Authenticated as anonymous user, need to link");
             displayLinkQr(page);
         } else {
-            console.log("Authenticated user, loading app");
-            await dialogs.alert("Authenticated user, loading app");
+            console.log(`Authenticated as user: ${user.uid}`);
         }
      } else {
         await dialogs.alert("Unauthenticated, signing in as anonymous");
@@ -51,7 +48,6 @@ export async function onPageLoaded(args: EventData) {
             const anonUserResult = await firebaseWebApi.auth().signInAnonymously();
             const anonUser:firebase.User = anonUserResult.user;
             console.log(`Signed in as anoymous user: ${anonUser.uid}`);
-            dialogs.alert(`Signed in as anoymous user: ${anonUser.uid}`);
             displayLinkQr(page);
         } catch (error) {
             console.log(error);
