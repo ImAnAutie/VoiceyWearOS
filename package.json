@@ -8,7 +8,7 @@
   "repository": "https://github.com/OkoWsc/VoiceyWearOS",
   "homepage": "https://okonetwork.org.uk",
   "dependencies": {
-    "@nativescript/core": "~7.1.0",
+    "@nativescript/core": "~7.3.0",
     "@nativescript/firebase": "^11.1.3",
     "@nativescript/theme": "~2.3.0",
     "nativescript-exit": "^1.0.1",
